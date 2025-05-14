@@ -1,0 +1,45 @@
+{
+  "name": "ez-button",
+  "version": "1.0.3",
+  "description": "Customizable button component for react-native.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "git": "https://github.com/Kwasi633/ez-button",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "yarn clean && mkdir -p lib && cp -R src/* lib/",
+    "prepare": "yarn build",
+    "clean": "rm -rf lib"
+  },
+  "keywords": [
+    "react-native",
+    "ui",
+    "react",
+    "button",
+    "component",
+    "mobile"
+  ],
+  "files": [
+    "lib",
+    "README.md",
+    "LICENSE"
+  ],
+  "author": "Ezra Asiedu",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^19.1.4",
+    "@types/react-native": "^0.73.0",
+    "react": "^19.1.0",
+    "react-native": "^0.79.2",
+    "react-native-vector-icons": "^10.2.0",
+    "typescript": "^5.8.3"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*",
+    "react-native-vector-icons": "*"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security"
+  }
+}
