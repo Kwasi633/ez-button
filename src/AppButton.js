@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacity, Text, View } from 'react-native';
+import { TouchableOpacity, Text, View, Image } from 'react-native';
 import styles from "./AppButtonStyles";
 
 const DefaultIconComponent = ({ name, size, color }) => {
@@ -33,16 +33,24 @@ const AppButton = ({
   buttonIcon,
   imageHeight,
   imageWidth,
-  imagePath: ImageComponent,
+  imagePath,
   disabledbackGroundColor,
   disabledTextColor,
   iconComponent,
-  buttonColor,
+  buttonIconColor,
+  buttonIconSize = 20, // Default to 20 if not provided
   marginLeft,
   marginRight,
   children,
 }) => {
   const IconComponent = iconComponent || DefaultIconComponent;
+  
+  // Determine if imagePath is an SVG component or a PNG/image source
+  const isImageComponent = typeof imagePath === 'function' || (typeof imagePath === 'object' && imagePath !== null);
+  
+  // Determine if buttonIcon is a string or a component
+  const isButtonIconComponent = typeof buttonIcon === 'object' && buttonIcon !== null && !Array.isArray(buttonIcon);
+  
   return (
     <TouchableOpacity
       style={[
@@ -65,7 +73,6 @@ const AppButton = ({
           alignSelf: alignSelf,
           bottom: bottom,
           borderRadius: borderRadius,
-          buttonIcon: buttonIcon,
           marginRight: marginRight,
           marginLeft: marginLeft
         },
@@ -73,13 +80,28 @@ const AppButton = ({
       onPress={onPress}
       disabled={disabled}
     >
-      {buttonIcon && iconComponent ? (
+      {isButtonIconComponent ? (
+        // If buttonIcon is a React component (like <Eye name={'add'} size={30} color="red"/>)
         <View style={styles.iconContainer}>
-          <IconComponent name={buttonIcon} size={20} color={buttonColor}/>
+          {buttonIcon}
         </View>
-      ) : ImageComponent ? (
+      ) : buttonIcon && iconComponent ? (
+        // If buttonIcon is a string and iconComponent is provided
         <View style={styles.iconContainer}>
-          <ImageComponent width={imageWidth} height={imageHeight} />
+          <IconComponent name={buttonIcon} size={buttonIconSize} color={buttonIconColor}/>
+        </View>
+      ) : imagePath ? (
+        <View style={styles.iconContainer}>
+          {isImageComponent ? (
+            // If it's an SVG Component
+            React.createElement(imagePath, { width: imageWidth, height: imageHeight })
+          ) : (
+            // If it's a regular image source (PNG, JPG, etc.)
+            <Image 
+              source={imagePath} 
+              style={{ width: imageWidth, height: imageHeight }}
+            />
+          )}
         </View>
       ) : null}
       <Text style={[styles.buttonText, {color: disabled ? disabledTextColor : color, fontSize: fontSize, fontWeight: fontWeight, fontFamily: fontFamily}]}>

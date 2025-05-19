@@ -17,17 +17,6 @@ This button component supports icons but does not include any icon packages by d
 
 Install an icon package (eg from react-native-vector-icons):
 
-```bash
-  yarn add react-native-vector-icons
-```
-
-# or
-
-```bash
-npm install react-native-vector-icons --save
-```
-
-
 Follow the installation instructions for the icon package:
 https://www.npmjs.com/package/react-native-vector-icons
 
@@ -91,7 +80,7 @@ export default App;
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
 | onPress | () => void | Required | Function to call when button is pressed |
-| backgroundColor | string | 'red' | Background color of the button |
+| backgroundColor | string | - | Background color of the button |
 | marginHorizontal | number | - | Horizontal margin on both sides |
 | width | number \| string | - | Width of the button |
 | marginTop | number | - | Top margin of the button |
@@ -102,12 +91,12 @@ export default App;
 | position | string | - | Position style ('absolute', 'relative') |
 | fontWeight | number \| string | - | Font weight of the text |
 | fontFamily | string | - | Font family of the text |
-| borderRadius | number | 15 | Border radius of the button |
-| fontSize | number | 16 | Font size of the button text |
+| borderRadius | number | - | Border radius of the button |
+| fontSize | number | - | Font size of the button text |
 | disabled | boolean | false | Whether the button is disabled |
 | height | number \| string | - | Height of the button |
-| borderWidth | number | 1 | Width of the button border |
-| borderColor | string | '#00A6FB' | Color of the button border |
+| borderWidth | number | - | Width of the button border |
+| borderColor | string | - | Color of the button border |
 | left | number | - | Left position when using absolute positioning |
 | right | number | - | Right position when using absolute positioning |
 | buttonColor | string | - | Color of the icon (if using buttonIcon) |
@@ -118,7 +107,7 @@ export default App;
 | buttonIcon | string | - | Name of the icon (if using an icon library) |
 | imageWidth | number | - | Width of the image when using imagePath |
 | imageHeight | number | - | Height of the image when using imagePath |
-| iconComponent | ComponentType<{ name: string; size?: number; color?: string }> | Eye (Ionicons) | Icon component library to use |
+| iconComponent | ComponentType<{ name: string; size?: number; color?: string }> | - | Icon component library to use |
 | imagePath | ComponentType<{ width?: number; height?: number }> | - | Custom image component to display |
 | disabledbackGroundColor | string | - | Background color when button is disabled |
 | disabledTextColor | string | - | Text color when button is disabled |
