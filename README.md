@@ -1,7 +1,7 @@
 # ez-button
 A customisable react-native button component. 
 
-![buttons](assets/buttons.png)
+![buttons](https://raw.githubusercontent.com/Kwasi633/ez-button/main/assets/buttons.png)
 
 ## Installation
 
