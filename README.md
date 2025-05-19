@@ -14,7 +14,7 @@ npm install ez-button
 ```bash
 yarn add ez-button
 ```
-# Adding Icon Support
+# Adding Icons
 This button component supports icons but does not include any icon packages by default. To use icons:
 
 Install an icon package from react-native-vector-icons:
@@ -22,6 +22,9 @@ Install an icon package from react-native-vector-icons:
 Follow the installation instructions for the icon package:
 https://www.npmjs.com/package/react-native-vector-icons
 
+
+# Adding Images(svg,png,etc)
+This button component supports custom svg and png images as props in place of react-native-vector-icons. Make sure your svg image setup is ready before using it. Png images work out of the box.
 
 # EzButton Sample Usage
 
