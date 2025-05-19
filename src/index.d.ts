@@ -21,8 +21,9 @@ interface AppButtonProps {
   borderWidth?: number;
   borderColor?: string;
   left?: number;
+  buttonIconSize?: number;
   right?: number;
-  buttonColor?: string;
+  buttonIconColor?: string;
   alignSelf?: string;
   bottom?: number;
   top?: number;

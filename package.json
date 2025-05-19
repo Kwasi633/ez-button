@@ -1,6 +1,6 @@
 {
   "name": "ez-button",
-  "version": "1.0.10",
+  "version": "1.0.19",
   "description": "Customizable button component for react-native.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -14,6 +14,9 @@
   "keywords": [
     "react-native",
     "ui",
+    "expo",
+    "app button",
+    "react-native button",
     "react",
     "button",
     "component",
@@ -22,6 +25,7 @@
   "files": [
     "lib",
     "README.md",
+    "./src/buttons.png",
     "LICENSE"
   ],
   "author": "Ezra Asiedu",
@@ -40,6 +44,7 @@
     "react-native-vector-icons": "*"
   },
   "dependencies": {
-    "fs": "^0.0.1-security"
+    "fs": "^0.0.1-security",
+    "prop-types": "^15.8.1"
   }
 }

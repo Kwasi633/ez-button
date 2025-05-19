@@ -1534,6 +1534,7 @@ __metadata:
     "@types/react": ^19.1.4
     "@types/react-native": ^0.73.0
     fs: ^0.0.1-security
+    prop-types: ^15.8.1
     react: ^19.1.0
     react-native: ^0.79.2
     react-native-vector-icons: ^10.2.0
@@ -2933,7 +2934,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.7.2":
+"prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:

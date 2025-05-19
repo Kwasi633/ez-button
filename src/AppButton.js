@@ -38,7 +38,7 @@ const AppButton = ({
   disabledTextColor,
   iconComponent,
   buttonIconColor,
-  buttonIconSize = 20, // Default to 20 if not provided
+  buttonIconSize,
   marginLeft,
   marginRight,
   children,
