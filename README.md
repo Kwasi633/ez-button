@@ -1,7 +1,7 @@
 # ez-button
 A customisable react-native button component. 
 
-![buttons](./src/buttons.png)
+![buttons](assets/buttons.png)
 
 ## Installation
 
@@ -14,10 +14,10 @@ npm install ez-button
 ```bash
 yarn add ez-button
 ```
-# Optional: Adding Icon Support
+# Adding Icon Support
 This button component supports icons but does not include any icon packages by default. To use icons:
 
-Install an icon package (eg from react-native-vector-icons):
+Install an icon package from react-native-vector-icons:
 
 Follow the installation instructions for the icon package:
 https://www.npmjs.com/package/react-native-vector-icons
@@ -72,7 +72,7 @@ export default App;
 ```
 
 # Button with icons
-Buttons styled with icons with react-native-vector-icons and custom images(svg or png)f
+Buttons styled with icons with react-native-vector-icons and custom images(svg or png)
 ```js
 import GoogleLogo from '../../assets/icons/Google.svg'
 import Ion from 'react-native-vector-icons/Ionicons'
