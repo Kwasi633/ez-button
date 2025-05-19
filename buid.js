@@ -48,5 +48,3 @@ import AppButton from './AppButton';
 export default AppButton;
 export { default as AppButtonStyles } from './AppButtonStyles';
 `);
-
-console.log('Build completed!');
