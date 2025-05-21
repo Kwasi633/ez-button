@@ -133,6 +133,44 @@ import Mat from 'react-native-vector-icons/MaterialCommunityIcons'
 >
   Premium
 </EzButton>
+
+//icon will appear after text on the button
+<EzButton
+  backgroundColor={'#00AEEF'}
+  color={'#fff'}
+  width={dimensions.width * 0.4}
+  height={50}
+  alignSelf='center'
+  fontWeight={'600'}
+  fontSize={20}
+  borderRadius={10}
+  endButtonIcon='person'
+  iconComponent={Ion}
+  endButtonIconColor="#000"
+  endButtonIconSize={24}
+>
+  Sign In
+</EzButton>
+
+//icons will appear on both sides of text on the button
+<EzButton
+  backgroundColor={'#00AEEF'}
+  color={'#fff'}
+  width={dimensions.width * 0.4}
+  height={50}
+  alignSelf='center'
+  fontWeight={'600'}
+  fontSize={20}
+  borderRadius={10}
+  endButtonIcon='chevron-forward-outline'
+  iconComponent={Ion}
+  endButtonIconColor="#000"
+  endButtonIconSize={24}
+  buttonIcon='settings-sharp'
+  buttonIconSize={24}
+>
+  Settings
+</EzButton>
 ```
 
 

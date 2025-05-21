@@ -42,20 +42,14 @@ const AppButton = ({
   marginLeft,
   marginRight,
   children,
-  endButtonIcon,
-  endImagePath,
-  endImageHeight,
-  endImageWidth,
-  endButtonIconColor,
-  endButtonIconSize,
 }) => {
   const IconComponent = iconComponent || DefaultIconComponent;
+  
+  
   const isImageComponent = typeof imagePath === 'function' || (typeof imagePath === 'object' && imagePath !== null);
+  
   const isButtonIconComponent = typeof buttonIcon === 'object' && buttonIcon !== null && !Array.isArray(buttonIcon);
   
-  const isEndImageComponent = typeof endImagePath === 'function' || (typeof endImagePath === 'object' && endImagePath !== null);
-  const isEndButtonIconComponent = typeof endButtonIcon === 'object' && endButtonIcon !== null && !Array.isArray(endButtonIcon);
-
   return (
     <TouchableOpacity
       style={[
@@ -98,38 +92,16 @@ const AppButton = ({
           {isImageComponent ? (
             React.createElement(imagePath, { width: imageWidth, height: imageHeight })
           ) : (
-            <Image
-              source={imagePath}
+            <Image 
+              source={imagePath} 
               style={{ width: imageWidth, height: imageHeight }}
             />
           )}
         </View>
       ) : null}
-      
       <Text style={[styles.buttonText, {color: disabled ? disabledTextColor : color, fontSize: fontSize, fontWeight: fontWeight, fontFamily: fontFamily}]}>
         {children}
       </Text>
-      
-      {isEndButtonIconComponent ? (
-        <View style={styles.iconContainer}>
-          {endButtonIcon}
-        </View>
-      ) : endButtonIcon && iconComponent ? (
-        <View style={styles.iconContainer}>
-          <IconComponent name={endButtonIcon} size={endButtonIconSize || buttonIconSize} color={endButtonIconColor || buttonIconColor}/>
-        </View>
-      ) : endImagePath ? (
-        <View style={styles.iconContainer}>
-          {isEndImageComponent ? (
-            React.createElement(endImagePath, { width: endImageWidth || imageWidth, height: endImageHeight || imageHeight })
-          ) : (
-            <Image
-              source={endImagePath}
-              style={{ width: endImageWidth || imageWidth, height: endImageHeight || imageHeight }}
-            />
-          )}
-        </View>
-      ) : null}
     </TouchableOpacity>
   );
 };

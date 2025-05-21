@@ -35,6 +35,12 @@ interface AppButtonProps {
   imagePath?: ComponentType<{ width?: number; height?: number }>;
   disabledbackGroundColor?: string;
   disabledTextColor?: string;
+  endButtonIcon?: string;
+  endImagePath?: ComponentType<{ width?: number; height?: number }>;
+  endImageHeight?: number;
+  endImageWidth?: number;
+  endButtonIconColor?: string;
+  endButtonIconSize?: number;
   children: ReactNode;
 }
 
