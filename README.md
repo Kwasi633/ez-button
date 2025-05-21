@@ -222,6 +222,12 @@ import Mat from 'react-native-vector-icons/MaterialCommunityIcons'
 | imagePath | ComponentType<{ width?: number; height?: number }> | - | Custom image component to display |
 | disabledbackGroundColor | string | - | Background color when button is disabled |
 | buttonIconSize | number | - | Size of the vector icon on the button |
+| endButtonIcon | string | - | Name of the icon after the text (if using an icon library) |
+| endButtonIconSize | number | - | Size of the vector icon after the text on the button |
+| endButtonIconColor | string | - | Color of the icon after the text on the button (if using buttonIcon) |
+| endImageWidth | number | - | Width of the image after the text when using imagePath |
+| endImageHeight | number | - | Height of the image after the text when using imagePath |
+| endImagePath | ComponentType<{ width?: number; height?: number }> | - | Custom image component to display after the text |
 | disabledTextColor | string | - | Text color when button is disabled |
 | children | ReactNode | Required | Text on the button |
 

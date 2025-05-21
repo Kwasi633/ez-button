@@ -1,6 +1,6 @@
 {
   "name": "ez-button",
-  "version": "1.0.28",
+  "version": "1.0.30",
   "description": "Customizable button component for react-native.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
